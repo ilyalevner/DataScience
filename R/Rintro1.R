@@ -44,6 +44,8 @@ str(pi)
 
 ### generate a vector of numbers
 v1 <- c(1,2,3,4,5,6)
+V1
+V2 <- c(4,12,15,17)
 min(v1)
 max(v1)
 mean(v1)
@@ -115,6 +117,7 @@ v9 <- letters
 v10 <- LETTERS
 v9[5]
 v10[1:3]
+v10[c(5,15,22)]
 
 length(v10)
 v10[seq(1,26,3)]
@@ -232,7 +235,7 @@ s %*% solve(s)
 
 ### Matrices can represent bidimentional objects. 
 ### To represent multidimentional object we use arrays
-a1 <- array(1:24, c(3,4,2))
+a1 <- array(1:25, c(3,4,2))
 a1
 class(a1)
 str(a1)
@@ -302,12 +305,12 @@ l4$chrlst
 l4[[2]][[1]][2]   # this will return the character "c" from the second object (chrlst)
 
 ### list of lists
-l5 <- list(list(model="2018 Toyota Camry Hybrid", price=32400, mpg=52),
-           list(model="2018 Ford Fusion Hybrid", price=37370 , mpg=42),
-           list(model="2018 Toyota Prius", price=30565 , mpg=52),
-           list(model="2018 Hyundai Ioniq",price=28300, mpg=58),
-           list(model="2018 Kia Optima Hybrid",price=35210, mpg=43),
-           list(model="2018 Ford C-Max Hybrid",price=27275, mpg=40)
+l5 <- list(a1=list(model="2018 Toyota Camry Hybrid", price=32400, mpg=52),
+           a2=list(model="2018 Ford Fusion Hybrid", price=37370 , mpg=42),
+           a3=list(model="2018 Toyota Prius", price=30565 , mpg=52),
+           a4=list(model="2018 Hyundai Ioniq",price=28300, mpg=58),
+           a5=list(model="2018 Kia Optima Hybrid",price=35210, mpg=43),
+           a6=list(model="2018 Ford C-Max Hybrid",price=27275, mpg=40)
       )
 
 l5
@@ -341,12 +344,12 @@ str(l6)
 l6$vector_list
 l6$matrix_list
 l6$n
-
+l6$
 
 
 
 ##########################
-### DATA FRAMES
+### DATA FRAMES (tables)
 ##########################
 ### A data.frame is a collection of vectors
 ### Vectors are arranged by colums
@@ -363,8 +366,8 @@ str(df)
 summary(df)
 
 ### Subseting a data.frame
-df[3,]
-df[,3]
+df[3,]### Subseting a data.frame (rows)
+df[,3]### Subseting a data.frame (colums)
 
 df$c
 df$b
@@ -421,13 +424,14 @@ b
 c <- NA
 is.na(c)
 
-### NULL deletes a column in a data frame 
+### NULL deletes a column in a data frame
+?df
 df <- mtcars
 df$mpg <- NULL
 
 set.seed(4)
 names.vec <- c('Avi', 'Ben', 'Gad', 'Dan', 'Harel', 'Vered', 'Zelig')
-ages.vec <- sample(25:35, size=7, replace=T)
+ages.vec <- sample(25:35, size=7, replace=T) ### sample- (RANDOMAIZE)
 is.married.vec <- sample(c(T, F), size=7, replace=T)
 cities = c('Jerusalem', 'Tel Aviv', 'Haifa')
 city.vec <- sample(cities, size=7, replace=T, prob=c(0.6, 0.3, 0.1))
