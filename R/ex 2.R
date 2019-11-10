@@ -34,12 +34,23 @@ colMeans(m1,1)
 mean(m1)
 
 
-set.seed(10)
-x=0
-runif(10)
-for (x in 1:10){
+
+az <-LETTERS
+za <- order (az,decreasing = TRUE)
+az [za]
+
+for (i in 1:40) {
+  x <- sample (x=1:10,size =1)
+  print (x)
+  if (x==8) {break
+    }
+}
+x<-0
+while(x!=8) {
+  x <- sample (x=1:40,size = 1)
   print(x)
-  if(x==8) {
-    break
-  }}
+}
+  
+
+
 
