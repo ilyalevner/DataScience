@@ -81,6 +81,8 @@ summary(s2)
 
 
 s3 <- c("I","love","data","science")
+s10 <- c("x1","x2","x3","x4")
+paste ("y",paste(s10,collapce ="+"),sep=" ~ ")
 
 s4 <- paste(s1,collapse=" ")
 s4
@@ -184,8 +186,12 @@ runif(n=5, min=-3, max=3)  ## 3 random numbers between -3 and 3
 ## normal distribution
 rnorm(n=10, mean=5, sd=2)
 
+rnd <- rnorm(n=1000, mean=20, sd=100)
+hist(rnd)
 ## binomial distribution
+
 rbinom(n=10, size=1, prob=0.4)
+rnd <- 
 
 ################################################################
 ######  Conditional expressions - return a boolean response
@@ -287,7 +293,8 @@ m1 == m2
 mapply(rep, LETTERS[1:6], 4, SIMPLIFY = FALSE)
 
 ### what will this generate?
-mapply(rep, LETTERS[1:6], 6:1, SIMPLIFY = FALSE)
+mapply(rep, LETTERS[1:6], 6:1, SIMPLIFY = TRUE)
+mapply(rep, LETTERS[1:6], 1:6, SIMPLIFY = TRUE)
 
 #####################################################################
 ############  Programming with R
@@ -313,6 +320,8 @@ c(x,y)
 x <- 5
 y <- ifelse(x > 5, 10, 5)
 c(x,y)
+
+ifelse (x >5,10,ifelse(x>10,3,ifelse(x>4,3,3)))
 
 ###################################
 ### Recursive
@@ -345,7 +354,7 @@ while(x < 5) {
 
 
 
-### permanent recursion
+ ### permanent recursion
 x <- 0
 while(TRUE) {
   x <- x + 1
