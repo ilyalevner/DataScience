@@ -386,7 +386,7 @@ y <- x + 15
 
 plot(x, y) 
 
-plot(x ~ y)  ## what happen with the axes?
+plot(x ~ y)  ## what happen with the axes?, cunvert x to y
 lines(x ~ y)
 
 plot(x, y, type='o') ## points and lines
