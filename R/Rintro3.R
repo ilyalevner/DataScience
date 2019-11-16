@@ -151,7 +151,7 @@ ggplot(data=iris3) +
 
 ggplot(data=iris3) +
   geom_point(mapping = aes(x = Sepal.ratio, y = Petal.ratio)) +
-  facet_wrap(~ Species, nrow = 1) 
+  facet_wrap(~ Species, nrow = 2) 
 
 ggplot(data=iris3) +
   geom_point(mapping = aes(x = Sepal.ratio, y = Petal.ratio, col=Species)) +
@@ -198,8 +198,9 @@ ggplot(data = iris3, mapping = aes(x = Sepal.ratio, y = Petal.ratio)) +
 ggplot(data = iris3) + 
   geom_histogram(mapping = aes(x=Sepal.Length))
 
+hist(iris3$Sepal.Length)
 ggplot(data = iris3,mapping = aes(x=Sepal.Length)) + 
-  geom_histogram(bins = 30)
+  geom_histogram(bins = 100)
 
 ### Bar graph
 iris3 <- iris3 %>%
