@@ -468,24 +468,32 @@ for(x in 1:4) {
 }
 
 ### barplot
-barplot(df$mpg)
+barplot(mtcars$mpg)
+barplot(mtcars$cy1)
+barplot(table(mtcars$cy1))
+mtcars$cy1 <- factor(mtcars$cyl)
+barplot(table(mtcars$gear))
+
 
 ### histograms and boxplots
 x <- rnorm(400, mean=40, sd=15)
 hist(x)
-y <- rbinom(1:400, 2, 0.3)
+y <- rbinom(1:400, 2, 0.6)
 summary(y)
 table(y)
+boxplot(x )
+
 boxplot(x ~ y)
 
-t1 <- table(v2)
+t1 <- table(y)
 t1
 pie(t1)
 
-scatter.smooth(x)
+scatter.smooth(x)## 
+scatter.smooth(x,col=y+1)
 
 ### adding color to a plot
-mycol <- ifelse(x >44,"red","blue")
+mycol <- ifelse(x >44,"red","yellow")
 scatter.smooth(x, col=mycol)
 
 ### adding a title and axis labels
