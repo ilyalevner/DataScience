@@ -5,7 +5,7 @@ library(dplyr)
 library(ggplot2)
 
 ### Import the titanic dataset
-titanic <- read.csv(paste(path,"../data/titanic.csv",sep="/"))
+titanic <- read.csv("../data/titanic.csv")
 head(titanic)
 
 ##################################################
@@ -13,9 +13,10 @@ head(titanic)
 ##################################################
 passangers = nrow(titanic)
 survived = sum(titanic['Survived'])
+titanic$Survived
 
 print(paste("We have", passangers, "passangers but only", survived, "of them survived (", 
-            survived/passangers*100, "%)"))
+            format(survived/passangers*100,digits = 5,)))
 
 ###################################################
 #### Missing values
@@ -131,7 +132,12 @@ titanic %>%
 ## Was there any difference in survival related to the embarking port?
 #######################################
 
-titanic %>% 
+titanic 
+  group_by(Embarked) %>% 
+  summarise(count=n(),survived=sum(Survived),percent=(sum(Survived)/n()*100))
+
+
+titanic %>% filter(Embarked%in%c('C','Q'))%>%
   group_by(Embarked) %>% 
   summarise(count=n(),survived=sum(Survived),percent=(sum(Survived)/n()*100))
 

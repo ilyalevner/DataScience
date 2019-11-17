@@ -269,6 +269,7 @@ grep("a", c("abc", "def", "cba a", "aa"), value=FALSE)  ### return indices
 grep("a", c("abc", "def", "cba a", "aa"), value=TRUE)   ### return values
 
 head(colours())
+length(colors())
 grep("orange",colours())
 grep("orange",colours(),value=T)
 
@@ -291,6 +292,7 @@ grep("2|4",colours()[100:150],value=T)
 grep("[24]",colours()[100:150],value=T)  
 
 grep("^[dl].*2$",colours(),value=T)  ## all strings beginin with d or l and ending with 2
+grep("^[ld].*2$",colours(),value=T)  ## all strings beginin with l or d and ending with 2
 
 #### logical grep
 grepl("a", c("abc", "def", "cba a", "aa"))  ##  value=TRUE is not supported
@@ -319,6 +321,9 @@ strsplit(c("The boy is playing with his car, his father is talking on the phone"
 
 ### separating by a point
 strsplit(c("The boy is playing with his car. His father is talking on the phone"),split='\\.')
+
+### separating by a point -no good
+strsplit(c("The boy is playing with his car. His father is talking on the phone"),split='.')
 
 
 ####################################################
@@ -459,7 +464,7 @@ str(mydata)
 ####### Excel
 library(xlsx)
 df1 <- read.xlsx("excel-example.xlsx",sheetIndex = 1)
-df2 <- read.xlsx("excel-example.xlsx",sheetIndex = 2)
+df2 <- read.xlsx("excel-example.xlsx",sheetIndex = 2,endRow =9 )
 
 ### Write a data.frame to an excel file
 write.xlsx(df1, "one-sheet-example.xlsx", sheetName="Data Frame")
