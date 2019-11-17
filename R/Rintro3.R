@@ -17,9 +17,11 @@ class(iris2)
 
 iris
 iris2
+head(iris2)
 
 #### selection of columns
 iris2 %>% select(Sepal.Length, Sepal.Width)
+select (iris2,Sepal.Length, Sepal.Width)
 
 ### selection of rows using a condition
 iris2 %>% filter(Species=="setosa")
@@ -65,7 +67,7 @@ iris3 %>% tally()
 
 iris3 %>% group_by(Species) %>% tally()
 
-iris3 %>% group_by(Species) %>% summarise(cnt = n())
+iris3 %>% group_by(Species) %>% summarise(max = n())
 
 ######## complex transformation
 ### Get the minimum, maximum and average of the height and mass, the count and the 
