@@ -1,0 +1,41 @@
+﻿Variable,Density.change,revenue.change.with.without,decision
+budget,no change,small change,drop
+popularity,no change,big change,drop
+runtime,no change,small change,drop
+revenue,no change,no change,leave it
+keyword_cnt,no change,big change,drop
+release_year,no change,no change,drop
+producers_cnt,no change,no change,drop
+countries_cnt,no change,big change,leave it
+actor0_movies_cnt,no change,small change,drop
+actor0_movies_5y_cnt,no change,no change,drop
+actor1_movies_cnt,no change,big change,leave it
+actor1_movies_5y_cnt,no change,no change,drop
+actor2_movies_cnt,no change,no change,drop
+actor2_movies_5y_cnt,no change,no change,drop
+actor0_prev_revenue,no change,big change,leave it
+actor1_prev_revenue,no change,no change,drop
+actor2_prev_revenue,no change,no change,drop
+director_movies_cnt,no change,big change,leave it
+director_movies_5y_cnt,no change,no change,drop
+depart_Art,no change,no change,drop
+depart_Camera,no change,no change,drop
+depart_Crew,have change,big change,leave it
+depart_Custom_Mkup,no change,no change,drop
+depart_Directing,no change,big change,leave it
+depart_Editing,no change,no change,drop
+depart_Lighting,have change,big change,leave it
+depart_Production,no change,no change,drop
+depart_Sound,no change,no change,drop
+depart_Visual_Effects,have change,big change,leave it
+depart_Writing,no change,no change,drop
+depart_Art_female,have change,big change,leave it
+depart_Camera_female,have change,big change,leave it
+depart_Crew_female,have change,big change,leave it
+depart_Custom_Mkup_female,no change,no change,drop
+depart_Directing_female,have change,big change,leave it
+depart_Editing_female,have change,big change,leave it
+depart_Production_female,no change,no change,drop
+depart_Sound_female,have change,big change,leave it
+depart_Visual_Effects_female,have change,big change,leave it
+depart_Writing_female,have change,big change,leave it

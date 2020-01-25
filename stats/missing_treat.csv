@@ -1,0 +1,41 @@
+﻿Variable,Mechanism,Treatment
+revenue,MNAR,leave
+actor2_prev_revenue,MNAR,leave
+actor1_prev_revenue,MNAR,leave
+actor0_prev_revenue,MNAR,leave
+sw_female_actor0,catogory,leave
+sw_male_actor0,catogory,leave
+sw_female_actor2,catogory,leave
+sw_male_actor2,catogory,leave
+sw_female_actor1,catogory,leave
+sw_male_actor1,catogory,leave
+producers_cnt,catogory,leave
+depart_Art,dellite,drop line
+depart_Camera,dellite,drop line
+depart_Crew,dellite,drop line
+depart_Custom_Mkup,dellite,drop line
+depart_Directing,dellite,drop line
+depart_Editing,dellite,drop line
+depart_Lighting,dellite,drop line
+depart_Production,dellite,drop line
+depart_Sound,dellite,drop line
+depart_Visual_Effects,dellite,drop line
+depart_Writing,dellite,drop line
+depart_Art_female,dellite,drop line
+depart_Camera_female,dellite,drop line
+depart_Crew_female,dellite,drop line
+depart_Custom_Mkup_female,dellite,drop line
+depart_Directing_female,dellite,drop line
+depart_Editing_female,dellite,drop line
+depart_Lighting_female,dellite,drop line
+depart_Production_female,dellite,drop line
+depart_Sound_female,dellite,drop line
+depart_Visual_Effects_female,dellite,drop line
+depart_Writing_female,dellite,drop line
+runtime,dellite,drop line
+release_date,dellite,drop line
+release_year,dellite,drop line
+release_month,dellite,drop line
+release_day,dellite,drop line
+seasonality,dellite,drop line
+,,
